@@ -8,7 +8,7 @@ void main()
 {
 	int n;
 	double  a, b, c, alpha, h, p, s, r;
-	const double pi = 2 * acos(0.0);
+	const double PI = 2 * acos(0);
     setlocale(LC_ALL,"Russian");
     printf("Меню:\n");
     printf("1 – подсчет площади треугольника по формуле Герона\n");
@@ -29,7 +29,7 @@ void main()
 			break;
         case 2: printf("Введите две стороны и угол между ними\n");
 			cin >> a >> b >> alpha;
-			s = (1.0/2) * a * b * sin(alpha * (pi / 180.0));
+			s = (1.0/2) * a * b * sin(alpha * (PI / 180.0));
 			printf("Площадь равна %f\n ", s);
 			break;
 		case 3: printf("Введите две стороны и высоту\n");
