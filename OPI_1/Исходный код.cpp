@@ -7,14 +7,15 @@ using namespace std;
 void main()
 {
 	int n;
-	double  a, b, c, alpha, h, p, s;
+	double  a, b, c, alpha, h, p, s, r;
 	const double pi = 2 * acos(0.0);
     setlocale(LC_ALL,"Russian");
     printf("Меню:\n");
     printf("1 – подсчет площади треугольника по формуле Герона\n");
     printf("2 – подсчет площади тругольника по двум сторонам и углу между ними\n");
 	printf("3 – подсчет площади тругольника по двум сторонам и высоте\n");
-    printf("4 – выход из программы\n");
+	printf("4 – подсчет площади тругольника по полупериметру и радиусу вписанной окружности\n");
+    printf("5 – выход из программы\n");
     printf("Ваш выбор? \n");   
     cin >> n;
     switch (n) 
@@ -35,7 +36,12 @@ void main()
 			cin >> a >> b >> h;
 			s = (1.0/2)* a * b * h;
 			printf("Площадь равна %f\n ", s);
-        case 4: return; 
+		case 4:
+			printf("Введите полупериметр и радиус вписанной окружности\n");
+			cin >> p >> r;
+			s = p * r;
+			printf("Площадь равна %f\n ", s);
+        case 5: return; 
         default: printf("Heвернoe значение.");
     }
 }
